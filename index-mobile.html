@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasma Elda & Diamanti</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Georgia, serif;
+      background: linear-gradient(to bottom,#fffaf7,#fdf3e6);
+      color:#6d4b2d;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    /* Page d'accueil */
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background:
+      linear-gradient(rgba(255,255,255,0.35),rgba(255,255,255,0.35)),
+      url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80");
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-shadow:2px 2px 8px rgba(0,0,0,.6);
+    }
+
+    .hero h1{
+      font-size:65px;
+      color:#FFD700;
+    }
+
+    .hero h2{
+      font-size:34px;
+      margin-top:15px;
+    }
+
+    .hero p{
+      margin-top:20px;
+      font-size:22px;
+    }
+
+    section{
+      padding:70px 20px;
+    }
+
+    h3{
+      color:#B8860B;
+      font-size:34px;
+      margin-bottom:25px;
+    }
+
+    .card{
+      max-width:760px;
+      margin:auto;
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+    }
+
+    .welcome{
+      font-size:22px;
+      line-height:1.8;
+    }
+
+    .quote{
+      margin-top:25px;
+      font-style:italic;
+      color:#b06b32;
+      font-size:21px;
+    }
+
+    /* Compte à rebours */
+
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .box{
+      background:#fff8dc;
+      border:2px solid gold;
+      border-radius:18px;
+      padding:20px;
+      min-width:90px;
+    }
+
+    .box span{
+      display:block;
+      font-size:34px;
+      font-weight:bold;
+      color:#B8860B;
+    }
+
+    /* Petits cœurs */
+
+    .heart{
+      position:fixed;
+      top:-20px;
+      color:#f7c7d8;
+      animation:fall 8s linear infinite;
+      z-index:-1;
+    }
+
+    @keyframes fall{
+      from{
+        transform:translateY(-20px);
+        opacity:1;
+      }
+
+      to{
+        transform:translateY(105vh);
+        opacity:0;
+      }
+    }
+
+    .footer{
+      background:#B8860B;
+      color:white;
+      padding:35px;
+      margin-top:50px;
+    }
+
+    audio{
+      margin-top:15px;
+    }
+
+
+    /* ===== VERSION TÉLÉPHONE ===== */
+    @media (max-width: 768px) {
+      body { overflow-x:hidden; }
+      .hero { height:auto; min-height:100vh; padding:40px 20px; }
+      .hero h1 { font-size:38px; line-height:1.2; }
+      .hero h2 { font-size:24px; margin-top:10px; }
+      .hero p { font-size:18px; padding:0 10px; line-height:1.6; }
+      h3 { font-size:28px; }
+      .card { width:100%; padding:22px; border-radius:18px; }
+      .welcome { font-size:18px; line-height:1.8; }
+      .quote { font-size:18px; }
+      .countdown { gap:12px; }
+      .box { min-width:70px; padding:15px 10px; flex:1 1 40%; }
+      .box span { font-size:28px; }
+      audio { width:100%; }
+      .footer h2 { font-size:28px; }
+      .footer h3 { font-size:24px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <h1>💍 Elda & Diamanti 💍</h1>
+
+    <h2>05 • 06 • 2027</h2>
+
+    <p>Me dashuri ju ftojmë të festoni ditën më të bukur të jetës sonë.</p>
+  </div>
+
+  <section>
+
+    <h3>🌸 Mirë se vini 🌸</h3>
+
+    <div class="card welcome">
+
+      <p>
+        Me zemër plot dashuri dhe lumturi,
+        ju ftojmë të merrni pjesë në dasmën tonë
+        dhe të ndani me ne këtë moment të paharrueshëm.
+      </p>
+
+      <p style="margin-top:20px;">
+        Prania juaj do ta bëjë këtë ditë edhe më të bukur
+        dhe do të mbetet përgjithmonë në zemrat tona.
+      </p>
+
+      <p class="quote">
+        “Dashuria është dhurata më e bukur që dy zemra mund t’i bëjnë njëra-tjetrës.”
+      </p>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h3>📅 Data e Dasmës</h3>
+
+    <div class="card">
+
+      <h2 style="color:#B8860B;font-size:36px;">5 Qershor 2027</h2>
+
+      <p style="margin-top:15px;font-size:20px;">🕕 Ora 19:00</p>
+
+      <p style="margin-top:10px;font-size:20px;">
+        📍 Vendndodhja e sallës së dasmës
+      </p>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h3>⏳ Numërimi mbrapsht</h3>
+
+    <div class="countdown">
+
+      <div class="box">
+        <span id="days">0</span>
+        Ditë
+      </div>
+
+      <div class="box">
+        <span id="hours">0</span>
+        Orë
+      </div>
+
+      <div class="box">
+        <span id="minutes">0</span>
+        Minuta
+      </div>
+
+      <div class="box">
+        <span id="seconds">0</span>
+        Sekonda
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h3>💌 Një mesazh për familjen dhe miqtë tanë</h3>
+
+    <div class="card welcome">
+
+      <p>
+        Familja dhe miqtë janë bekimi më i madh në jetën tonë.
+        Nuk mund ta imagjinojmë këtë ditë pa ju pranë nesh.
+      </p>
+
+      <p style="margin-top:20px;">
+        Ju presim me shumë dashuri,
+        buzëqeshje dhe gëzim për të festuar së bashku.
+      </p>
+
+      <h2 style="margin-top:30px;color:#B8860B;">
+        Na nderoni me praninë tuaj ❤️
+      </h2>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h3>🎵 Kënga jonë</h3>
+
+    <div class="card">
+
+      <p>Mund të vendosni këngën tuaj të preferuar të dashurisë.</p>
+
+      <audio controls>
+        <source src="muzika.mp3" type="audio/mpeg">
+      </audio>
+
+      <p style="margin-top:15px;font-size:14px;">
+        Vendosni një skedar muzikor me emrin <b>muzika.mp3</b> në të njëjtin dosje.
+      </p>
+
+    </div>
+
+  </section>
+
+  <div class="footer">
+
+    <h2>Me dashuri ❤️</h2>
+
+    <h3 style="color:white;margin-top:10px;">Elda & Diamant</h3>
+
+    <p style="margin-top:10px;">05 Qershor 2027</p>
+
+  </div>
+
+  <script>
+
+    // Compte à rebours jusqu'au 5 juin 2027 à 18h00
+
+    const wedding = new Date("June 5, 2027 18:00:00").getTime();
+
+    setInterval(function(){
+
+      const now = new Date().getTime();
+
+      const diff = wedding - now;
+
+      document.getElementById("days").innerHTML =
+      Math.floor(diff/(1000*60*60*24));
+
+      document.getElementById("hours").innerHTML =
+      Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+      document.getElementById("minutes").innerHTML =
+      Math.floor((diff%(1000*60*60))/(1000*60));
+
+      document.getElementById("seconds").innerHTML =
+      Math.floor((diff%(1000*60))/1000);
+
+    },1000);
+
+    // Petits cœurs qui tombent
+
+    const heartCount = window.innerWidth < 768 ? 15 : 30;
+
+    for(let i=0;i<heartCount;i++){
+
+      const heart=document.createElement("div");
+
+      heart.className="heart";
+
+      heart.innerHTML="❤";
+
+      heart.style.left=Math.random()*100+"vw";
+
+      heart.style.fontSize=(15+Math.random()*20)+"px";
+
+      heart.style.animationDelay=Math.random()*8+"s";
+
+      document.body.appendChild(heart);
+
+    }
+
+  </script>
+
+</body>
+</html>

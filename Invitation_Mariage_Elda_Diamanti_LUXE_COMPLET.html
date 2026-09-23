@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dasma Elda & Diamanti</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;background:#050505;color:#F8E8B5;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at top,#4a3608,transparent 40%),radial-gradient(circle at bottom,#221503,transparent 35%);opacity:.5;pointer-events:none}
+#intro{position:fixed;inset:0;background:#050505;display:flex;justify-content:center;align-items:center;z-index:9999;transition:1s}
+#intro.hide{opacity:0;visibility:hidden}
+.envelope{width:min(340px,90vw);height:220px;position:relative;cursor:pointer;perspective:1200px}
+.env-body{position:absolute;inset:0;border-radius:20px;background:linear-gradient(145deg,#191919,#080808);border:2px solid #D4AF37;display:flex;justify-content:center;align-items:center;box-shadow:0 0 40px rgba(212,175,55,.35)}
+.flap{position:absolute;top:0;width:100%;height:52%;background:linear-gradient(#F0D36F,#A77A1E);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:1s}
+.envelope.open .flap{transform:rotateX(180deg)}
+.seal{position:absolute;top:78px;left:50%;transform:translateX(-50%);width:65px;height:65px;border-radius:50%;background:#8b0014;border:3px solid #FFD86B;color:#FFD86B;display:flex;align-items:center;justify-content:center;font-size:24px;transition:1s}
+.envelope.open .seal{transform:translateX(-50%) scale(0);opacity:0}
+.invite{text-align:center;color:#fff}.invite p{color:#FFD86B;margin-top:10px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:70px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80") center/cover}
+.hero h1{font-size:60px;color:#FFD86B;text-shadow:0 0 20px rgba(255,215,0,.5)}
+.hero h2{color:#fff;margin:15px 0}
+.hero p{max-width:650px;font-size:22px;line-height:1.8}
+section{padding:70px 20px}
+.title{text-align:center;color:#FFD86B;font-size:34px;margin-bottom:30px}
+.card{max-width:760px;margin:auto;background:rgba(18,18,18,.92);padding:30px;border-radius:26px;border:1px solid rgba(212,175,55,.4);box-shadow:0 0 25px rgba(212,175,55,.15)}
+.names{text-align:center;font-size:34px;color:#FFD700;margin-bottom:20px}
+.card p{text-align:center;font-size:20px;line-height:1.8}
+.quote{margin-top:20px;color:#F3D57A;font-style:italic}
+.button{display:inline-block;margin-top:22px;padding:14px 30px;border-radius:40px;background:linear-gradient(90deg,#A77B18,#FFD86B,#A77B18);color:#000;text-decoration:none;font-weight:bold;box-shadow:0 0 18px rgba(255,215,0,.35)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.box{padding:18px;background:linear-gradient(#241803,#111);border:1px solid #D4AF37;border-radius:18px;text-align:center}
+.box span{display:block;font-size:34px;color:#FFD700;font-weight:bold}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:20px}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;border:1px solid #D4AF37}
+audio{width:100%;margin-top:20px}
+.footer{background:#090909;padding:45px 20px;text-align:center;border-top:1px solid #D4AF37}
+.footer h2{color:#FFD700}
+.petal{position:fixed;top:-30px;color:#D4AF37;opacity:.5;pointer-events:none;animation:fall linear infinite;z-index:-1}
+.sparkle{position:fixed;width:5px;height:5px;border-radius:50%;background:#FFD700;box-shadow:0 0 10px gold;pointer-events:none}
+@keyframes fall{from{transform:translateY(-20px) rotate(0)}to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@media(max-width:768px){
+.hero h1{font-size:40px}.hero h2{font-size:22px}.hero p,.card p{font-size:18px}
+.countdown{grid-template-columns:repeat(2,1fr)}.box span{font-size:28px}.button{display:block;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div id="intro">
+<div class="envelope" id="envelope">
+<div class="flap"></div>
+<div class="env-body"><div class="invite"><h2>💌 Hap Ftesën</h2><p>Preke letrën për ta hapur</p></div></div>
+<div class="seal">❤</div>
+</div>
+</div>
+
+<header class="hero">
+<h1>💍 Elda & Diamanti 💍</h1>
+<h2>05 • 06 • 2027</h2>
+<p>Me dashuri ju ftojmë të festoni ditën më të bukur të jetës sonë.</p>
+</header>
+
+<section>
+<h2 class="title">🌹 Mirë se vini 🌹</h2>
+<div class="card">
+<div class="names">Elda ♥ Diamanti</div>
+<p>Me zemër plot dashuri dhe lumturi, ju ftojmë të merrni pjesë në dasmën tonë dhe të ndani me ne këtë moment të paharrueshëm.</p>
+<p class="quote">“Dashuria është dhurata më e bukur që dy zemra mund t’i bëjnë njëra-tjetrës.”</p>
+</div>
+</section>
+
+<section>
+<h2 class="title">📅 Data e Dasmës</h2>
+<div class="card">
+<p style="font-size:32px;color:#FFD700;">5 Qershor 2027</p>
+<p>🕕 Ora 19:00</p>
+<p>📍 Vendndodhja e sallës së dasmës</p>
+<p><a href="#" class="button">📍 Hap Google Maps</a></p>
+</div>
+</section>
+
+<section>
+<h2 class="title">⏳ Numërimi Mbrapsht</h2>
+<div class="card">
+<div class="countdown">
+<div class="box"><span id="days">0</span>Ditë</div>
+<div class="box"><span id="hours">0</span>Orë</div>
+<div class="box"><span id="minutes">0</span>Minuta</div>
+<div class="box"><span id="seconds">0</span>Sekonda</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">📸 Kujtimet Tona</h2>
+<div class="card">
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80">
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">🎵 Kënga Jonë</h2>
+<div class="card">
+<p>Vendosni këngën tuaj të preferuar.</p>
+<audio controls><source src="muzika.mp3" type="audio/mpeg"></audio>
+</div>
+</section>
+
+<footer class="footer">
+<h2>Me Dashuri ❤️</h2>
+<p>Elda & Diamanti</p>
+<p>05 Qershor 2027</p>
+</footer>
+
+<script>
+const intro=document.getElementById("intro");
+const env=document.getElementById("envelope");
+env.onclick=()=>{env.classList.add("open");setTimeout(()=>intro.classList.add("hide"),1100);};
+
+const wedding=new Date("June 5, 2027 19:00:00").getTime();
+function update(){
+ const diff=Math.max(wedding-Date.now(),0);
+ days.textContent=Math.floor(diff/86400000);
+ hours.textContent=Math.floor((diff%86400000)/3600000);
+ minutes.textContent=Math.floor((diff%3600000)/60000);
+ seconds.textContent=Math.floor((diff%60000)/1000);
+}
+update();setInterval(update,1000);
+
+const petals=window.innerWidth<768?20:35;
+for(let i=0;i<petals;i++){
+ const p=document.createElement("div");
+ p.className="petal";p.innerHTML="✦";
+ p.style.left=Math.random()*100+"vw";
+ p.style.fontSize=(12+Math.random()*18)+"px";
+ p.style.animationDuration=(6+Math.random()*8)+"s";
+ p.style.animationDelay=Math.random()*6+"s";
+ document.body.appendChild(p);
+}
+
+function sparkle(x,y){
+ for(let i=0;i<12;i++){
+  const s=document.createElement("div");
+  s.className="sparkle";
+  s.style.left=x+"px";s.style.top=y+"px";
+  document.body.appendChild(s);
+  const dx=(Math.random()-.5)*140;
+  const dy=(Math.random()-.5)*140;
+  s.animate([{transform:"translate(0,0)",opacity:1},{transform:`translate(${dx}px,${dy}px) scale(0)`,opacity:0}],{duration:900,easing:"ease-out"});
+  setTimeout(()=>s.remove(),900);
+ }
+}
+document.addEventListener("touchstart",e=>sparkle(e.touches[0].clientX,e.touches[0].clientY));
+document.addEventListener("click",e=>sparkle(e.clientX,e.clientY));
+</script>
+
+</body>
+</html>
